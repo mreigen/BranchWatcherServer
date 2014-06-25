@@ -1,8 +1,8 @@
 # config valid only for Capistrano 3.1
 lock '3.1.0'
 
-set :application, 'CMS'
-set :repo_url, 'http://pswgithub.rds.lexmark.com/PerceptiveCloudPlatform/cms.git'
+set :application, 'BranchWatcherServer'
+set :repo_url, 'https://github.com/mreigen/BranchWatcherServer.git'
 set :branch, :develop
 
 # Default branch is :master
