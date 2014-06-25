@@ -4,9 +4,9 @@ source 'https://rubygems.org'
 gem 'rails', '4.1'
 
 # gem 'runr', '~> 0.3.3', :git => 'http://pswgithub.rds.lexmark.com/PerceptiveCloudPlatform/runr.git'
-# gem 'runr', :git => 'http://pswgithub.rds.lexmark.com/PerceptiveCloudPlatform/runr.git', :branch => 'develop'
+gem 'runr', :git => 'http://pswgithub.rds.lexmark.com/PerceptiveCloudPlatform/runr.git', :branch => 'develop'
 # uncomment (and comment the previous line) to use the version of runr checked out in your project folder
-gem 'runr', :path => '../runr'
+# gem 'runr', :path => '../runr'
 
 gem 'eventmachine'
 

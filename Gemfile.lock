@@ -8,8 +8,10 @@ GIT
       origin (~> 2.1)
       tzinfo (>= 0.3.37)
 
-PATH
-  remote: ../runr
+GIT
+  remote: http://pswgithub.rds.lexmark.com/PerceptiveCloudPlatform/runr.git
+  revision: 78c6ccce3afcf056acdda66d44c3106eda7c8bc9
+  branch: develop
   specs:
     runr (0.4.1)
 
