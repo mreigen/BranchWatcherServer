@@ -3,7 +3,7 @@ lock '3.1.0'
 
 set :application, 'BranchWatcherServer'
 set :repo_url, 'https://github.com/mreigen/BranchWatcherServer.git'
-set :branch, :develop
+set :branch, :master
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
