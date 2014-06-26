@@ -20,7 +20,7 @@ class Branch
 
       if subscribers && subscribers[:subscribers] && subscribers[:subscribers]["list"]
         subscriber_list = JSON.parse subscribers[:subscribers]["list"]
-        subscriber_list << sender
+        subscriber_list << sender unless subscriber_list.include? sender
       else
         subscriber_list = [sender]
       end
