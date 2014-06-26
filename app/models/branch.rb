@@ -5,22 +5,26 @@ class Branch
 
   class << self
 
-    # def add_to_subscriber_list(subscriber)
-    #   runr_session_set("subscriber_list", asdf)
-    # end
+    # TODO: Decide if the server or the client will do the logic of
+    # comparing branch/repo names. If the server will send out all
+    # the updates from github then the client will sort them out (more flexible). Or
+    # if the server will filter them out then only send to some clients
+
+    # TODO move this subscrition methods to Subscriber model??
 
     def subscribe(message_hsh)
       sender = message_hsh[:sender]
-      # runr_data_set_set(sender, sender)
 
       subscriber_list = []
-      subscribers     = runr_session_get("subscribers")
-      if subscribers.blank? || subscribers[:list].blank?
-        subscriber_list = [sender]
-      else
+      subscribers     = RunrWatcherServer.runr_session_get("subscribers")
+
+      if subscribers && subscribers[:subscribers] && subscribers[:subscribers]["list"]
+        subscriber_list = JSON.parse subscribers[:subscribers]["list"]
         subscriber_list << sender
+      else
+        subscriber_list = [sender]
       end
-      runr_session_set("subscribers", ["list", subscriber_list])
+      RunrWatcherServer.runr_session_set("subscribers", ["list", subscriber_list])
     end
 
     # FIXME: remove this from a list of subscribers
