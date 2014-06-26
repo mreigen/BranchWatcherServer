@@ -6,7 +6,7 @@ class HookController < ApplicationController
       sent_to: "watcher1",
       topic: "branch",
       task: "update",
-      data: {what:"sup"}
+      params: params
     )
     render json: {something: "here"}
   end
